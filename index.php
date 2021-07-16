@@ -38,11 +38,11 @@ if (isset($_GET['logout'])) {
                     </h3>
                 </div>
             <?php endif ?>
-            <div class="card-body">
+            <div class="card-body mx-3">
                 <!-- logged in user information -->
                 <?php if (isset($_SESSION['email'])) : ?>
                     <h5 class="card-title">Welcome <strong><?php echo $_SESSION['username']; ?></strong></h5>
-                    <p><a href="index.php?logout='1'" style="color: red;">logout</a></p>
+                    <a class="btn btn-primary" role="button" href="index.php?logout='1'">Logout</a>
                 <?php endif ?>
             </div>
         </div>

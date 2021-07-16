@@ -44,7 +44,7 @@ if (isset($_POST['reg_user'])) {
         }
 
         if ($user['email'] === $email) {
-            array_push($errors, "email already exists");
+            array_push($errors, "Email already exists");
         }
     }
 
