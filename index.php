@@ -49,6 +49,6 @@ if (isset($_GET['logout'])) {
     </div>
 </div>
 
-<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>

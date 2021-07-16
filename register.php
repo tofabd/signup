@@ -3,7 +3,7 @@
 <html>
 <head>
     <!-- Bootstrap CSS -->
-    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <title>Registration system PHP and MySQL</title>
 
     <!-- Custom styles for this template -->
@@ -47,7 +47,7 @@
         </div>
     </div>
 </div>
-<script src="bootstrap/js/bootstrap.bundle.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
 
 </body>
 
