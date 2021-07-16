@@ -27,21 +27,23 @@ if (isset($_GET['logout'])) {
             <div class="card-header  text-white bg-primary text-center fs-2 fw-bold">
                 Home Page
             </div>
-            <!-- notification message -->
-            <?php if (isset($_SESSION['success'])) : ?>
-                <div class="error success">
-                    <h3>
-                        <?php
-                        echo $_SESSION['success'];
-                        unset($_SESSION['success']);
-                        ?>
-                    </h3>
-                </div>
-            <?php endif ?>
+
             <div class="card-body mx-3">
+                <!-- notification message -->
+                <?php if (isset($_SESSION['success'])) : ?>
+                    <div class="error success">
+                        <h3>
+                            <?php
+                            echo $_SESSION['success'];
+                            unset($_SESSION['success']);
+                            ?>
+                        </h3>
+                    </div>
+                <?php endif ?>
+
                 <!-- logged in user information -->
                 <?php if (isset($_SESSION['email'])) : ?>
-                    <h5 class="card-title">Welcome <strong><?php echo $_SESSION['username']; ?></strong></h5>
+                    <h5 class="card-title">Welcome <span class="text-danger"><?php echo $_SESSION['username']; ?></span></h5>
                     <a class="btn btn-primary" role="button" href="index.php?logout='1'">Logout</a>
                 <?php endif ?>
             </div>
