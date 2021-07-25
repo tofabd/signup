@@ -9,6 +9,12 @@ $errors = [];
 // connect to the database
 $db = mysqli_connect('localhost', 'root', '', 'mydb');
 
+
+function is_valid_password($password)
+{
+    return preg_match_all('/^(?=.*[!@#$%^&*-])(?=.*[0-9])(?=.*[A-Z]).{8,20}$/', $password) ? TRUE : FALSE;
+}
+
 // REGISTER USER
 if (isset($_POST['reg_user'])) {
     // receive all input values from the form
@@ -31,6 +37,12 @@ if (isset($_POST['reg_user'])) {
     if ($password_1 != $password_2) {
         array_push($errors, "The two passwords do not match");
     }
+  
+    if (!is_valid_password($password_1)) {
+        array_push($errors, "Password is not valid");
+    }
+
+
 
     // first check the database to make sure 
     // a user does not already exist with the same username and/or email
@@ -61,6 +73,3 @@ if (isset($_POST['reg_user'])) {
         header('location: index.php');
     }
 }
-
-
-
