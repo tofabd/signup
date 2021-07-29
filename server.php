@@ -37,7 +37,7 @@ if (isset($_POST['reg_user'])) {
     if ($password_1 != $password_2) {
         array_push($errors, "The two passwords do not match");
     }
-  
+
     if (!is_valid_password($password_1)) {
         array_push($errors, "Password is not valid");
     }
@@ -69,7 +69,7 @@ if (isset($_POST['reg_user'])) {
         mysqli_query($db, $query);
         $_SESSION['username'] = $username;
         $_SESSION['email'] = $email;
-        $_SESSION['success'] = "You are now logged in";
+        $_SESSION['success'] = "You are now logged in successfully!";
         header('location: index.php');
     }
 }
